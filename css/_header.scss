@@ -1,0 +1,113 @@
+header {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('../img/tloHead.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+
+    article {
+        width: 30%;
+        margin-left: 10%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        h3 {
+            font-size: 4rem;
+            margin-bottom: 30px;
+            font-family: 'Anton', sans-serif;
+            letter-spacing: 2px;
+        }
+
+        p {
+            width: 60%;
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            line-height: 3rem;
+        }
+
+        button.btnHead {
+            padding: 20px 50px;
+            color: white;
+            background-color: rgba(255, 99, 0, 0.7);
+            text-transform: uppercase;
+            font-size: 2.2rem;
+            font-weight: normal;
+            border: none;
+            box-shadow: 5px 5px 15px 0 #353b48;
+            letter-spacing: 2px;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &:hover {
+                background-color: rgba(255, 99, 0, 1);
+            }
+        }
+    }
+}
+
+@media(max-width:813px) {
+    header {
+
+        article {
+            width: 70%;
+
+            h3 {
+                font-size: 3rem;
+                letter-spacing: 1.5;
+            }
+
+            p {
+                width: 70%;
+                font-size: 1.6rem;
+                margin-bottom: 20px;
+                line-height: 2rem;
+            }
+
+            button.btnHead {
+                padding: 10px 20px;
+            }
+        }
+    }
+}
+
+@media (orientation: portrait) and (max-width: 769px) {
+    header {
+        min-height: 60vh;
+    }
+}
+
+@media (orientation: portrait) and (max-width: 600px) {
+    header {
+        article {
+            width: 100%;
+            margin-left: 0;
+
+            h3 {
+                font-size: 2.5rem;
+                margin: 70px 0 30px;
+                text-align: center;
+            }
+
+            p {
+                width: 80%;
+                text-align: center;
+                margin: 0 auto;
+                font-size: 1.6rem;
+                margin-bottom: 15px;
+                line-height: 2rem;
+            }
+
+            button.btnHead {
+                display: block;
+                padding: 10px 20px;
+                color: white;
+                font-size: 1.6rem;
+                margin: 30px auto;
+
+            }
+        }
+    }
+}

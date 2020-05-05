@@ -1,0 +1,166 @@
+nav {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-content: center;
+    height: 10vh;
+    z-index: 5;
+    transition: 0.5s;
+
+    &.scrolled {
+        height: 5vh;
+        background-color: rgba($color: #fff, $alpha: 0.9)
+    }
+
+    h1.logo {
+        flex-basis: 30%;
+        align-self: center;
+        text-align: center;
+        font-size: 3rem;
+        font-family: 'Pacifico', cursive;
+        cursor: pointer;
+
+    }
+
+    div.menu {
+        flex-basis: 70%;
+        align-self: center;
+
+        ul {
+            list-style: none;
+            padding: 0 10%;
+            display: flex;
+            justify-content: space-around;
+
+            li {
+                padding: 10px 2px;
+                position: relative;
+                letter-spacing: 1.5px;
+                font-size: 2rem;
+                text-transform: uppercase;
+                font-weight: bold;
+                cursor: pointer;
+                overflow: hidden;
+
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -100%;
+                    height: 4px;
+                    width: 100%;
+                    background-color: #FF6300;
+                    transition: .2s linear;
+                }
+
+                &:hover::before {
+                    left: 0;
+                }
+
+                &.active::before {
+                    left: 0;
+                }
+
+            }
+        }
+    }
+}
+
+@media (max-width:1025px) {
+    nav {
+
+        h1.logo {
+            flex-basis: 20%;
+        }
+
+        div.menu {
+            flex-basis: 80%;
+        }
+    }
+}
+
+@media (max-width:813px) {
+    nav {
+
+        h1.logo {
+            font-size: 2.5rem;
+
+        }
+
+        div.menu {
+
+
+            ul {
+
+                li {
+                    letter-spacing: 1.2px;
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+}
+
+@media (orientation: landscape) and (max-width: 740px) {
+    nav {
+
+        h1.logo {
+            font-size: 2rem;
+            flex-basis: 12%;
+
+        }
+
+        div.menu {
+            flex-basis: 88%;
+
+            ul {
+
+                li {
+                    letter-spacing: 1;
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+}
+
+@media (orientation: portrait) and (max-width: 769px) {
+    nav {
+
+        h1.logo {
+            font-size: 2.5rem;
+            flex-basis: 15%;
+        }
+
+        div.menu {
+            flex-basis: 85%;
+        }
+    }
+}
+
+@media (orientation: portrait) and (max-width: 600px) {
+    nav {
+
+        h1.logo {
+            font-size: 2rem;
+            flex-basis: 40%;
+
+        }
+
+        div.menu {
+            flex-basis: 85%;
+            display: none;
+
+            ul {
+
+
+                li {
+                    font-size: 1rem;
+                }
+            }
+        }
+    }
+}

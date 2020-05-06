@@ -10,7 +10,6 @@ const sectionSubscribe = document.querySelector('.subscribe');
 const sectionBlog = document.querySelector('.blog');
 const sectionContact = document.querySelector('.contact');
 let scrollUp = 0;
-let scrollDown = 0;
 
 /* Ustawienie nasłuchiwania */
 if (window.scrollY === 0) {
@@ -75,17 +74,14 @@ menuButtons.forEach((menuButton) => {
             const positionY = window.scrollY;
             if (positionY > currentSectionTop) {
                 scrollUp = 1;
-            } else {
-                scrollDown = 1;
             }
             /* scroll w dół */
-            if (positionY < currentSectionTop - 2 * navHeight && scrollDown) {
+            if (positionY < currentSectionTop - 2 * navHeight && !scrollUp) {
                 window.scrollTo(0, positionY + navHeight);
-            } else if (positionY >= currentSectionTop - 2 * navHeight && positionY < currentSectionTop - navHeight && scrollDown) {
+            } else if (positionY >= currentSectionTop - 2 * navHeight && positionY < currentSectionTop - navHeight && !scrollUp) {
                 window.scrollTo(0, positionY + 1);
-            } else if (positionY == currentSectionTop - navHeight && scrollDown) {
+            } else if (positionY == currentSectionTop - navHeight && !scrollUp) {
                 clearInterval(startScroll);
-                scrollDown = 0;
                 return;
             }
 
@@ -94,6 +90,7 @@ menuButtons.forEach((menuButton) => {
                 window.scrollTo(0, positionY - navHeight);
             } else if (sectionName == 'home' && positionY == 0) {
                 clearInterval(startScroll);
+                scrollUp = 0;
                 return;
             }
             if (positionY > currentSectionTop && scrollUp) {

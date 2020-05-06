@@ -1417,6 +1417,35 @@ html {
   }
 }
 
+@media (orientation: portrait) and (max-width: 350px) {
+  .wrap section.subscribe article {
+    left: 5%;
+    width: 85%;
+  }
+  .wrap section.subscribe article h3 {
+    margin: 10px 0;
+    font-size: 2.5rem;
+  }
+  .wrap section.subscribe article p {
+    width: 85%;
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+  .wrap section.subscribe article form input:nth-child(1) {
+    line-height: 30px;
+    font-size: 1.4rem;
+  }
+  .wrap section.subscribe article form input:nth-child(2) {
+    line-height: 30px;
+    font-size: 1.4rem;
+  }
+  .wrap section.contact div.contactForm form input:nth-last-child(1) {
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 0;
+  }
+}
+
 .wrap footer {
   color: #dfe4ea;
   width: 100%;

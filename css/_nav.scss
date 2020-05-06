@@ -127,6 +127,30 @@ nav {
     }
 }
 
+@media (orientation: landscape) and (max-width: 600px) {
+    nav {
+
+        h1.logo {
+            padding-left: 1%;
+            font-size: 1.8rem;
+            flex-basis: 10%;
+
+        }
+
+        div.menu {
+            flex-basis: 90%;
+
+            ul {
+                padding: 0 2%;
+
+                li {
+                    font-size: 1.4rem;
+                }
+            }
+        }
+    }
+}
+
 @media (orientation: portrait) and (max-width: 769px) {
     nav {
 

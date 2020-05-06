@@ -133,6 +133,25 @@ html {
   }
 }
 
+@media (orientation: landscape) and (max-width: 600px) {
+  .wrap nav h1.logo {
+    padding-left: 1%;
+    font-size: 1.8rem;
+    -ms-flex-preferred-size: 10%;
+        flex-basis: 10%;
+  }
+  .wrap nav div.menu {
+    -ms-flex-preferred-size: 90%;
+        flex-basis: 90%;
+  }
+  .wrap nav div.menu ul {
+    padding: 0 2%;
+  }
+  .wrap nav div.menu ul li {
+    font-size: 1.4rem;
+  }
+}
+
 @media (orientation: portrait) and (max-width: 769px) {
   .wrap nav h1.logo {
     font-size: 2.5rem;
@@ -1013,6 +1032,72 @@ html {
 }
 
 @media (orientation: landscape) and (max-width: 740px) {
+  .wrap section.services {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .wrap section.services h3 {
+    margin-top: 20px;
+  }
+  .wrap section.services article.servicesList {
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+    width: 100%;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: static;
+  }
+  .wrap section.services div.servicesWrap {
+    width: 80%;
+    margin: 0 auto;
+    position: static;
+    -webkit-transform: none;
+            transform: none;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .wrap section.services div.servicesWrap div.service {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 40px;
+    margin-bottom: 20px;
+  }
+  .wrap section.services div.servicesWrap div.service span.text {
+    padding: 0;
+    -ms-flex-preferred-size: 80%;
+        flex-basis: 80%;
+    font-size: 1.6rem;
+    line-height: 40px;
+  }
+  .wrap section.services div.servicesWrap div.service span.longer {
+    line-height: 40px;
+    padding: 0;
+  }
+  .wrap section.services div.servicesWrap div.service span.icon {
+    line-height: 40px;
+    -ms-flex-preferred-size: 20%;
+        flex-basis: 20%;
+    font-size: 2.5rem;
+  }
   .wrap section.gallery article {
     width: 100%;
   }
@@ -1033,6 +1118,15 @@ html {
     display: -ms-flexbox;
     display: flex;
     height: 100vh;
+  }
+  .wrap section.subscribe article {
+    width: 90%;
+  }
+  .wrap section.subscribe article p {
+    width: 65%;
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+    line-height: 2rem;
   }
   .wrap section.blog div.imagesBlog div.imageBlog {
     height: 250px;

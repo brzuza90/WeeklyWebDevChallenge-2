@@ -748,6 +748,62 @@ section.contact {
 }
 
 @media (orientation: landscape) and (max-width: 740px) {
+    section.services {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+            margin-top: 20px;
+        }
+
+
+        article.servicesList {
+            flex-basis: 80%;
+            width: 100%;
+            order: 2;
+            display: flex;
+            position: static;
+        }
+
+        div.servicesWrap {
+            width: 80%;
+            margin: 0 auto;
+            position: static;
+            transform: none;
+            display: flex;
+            flex-direction: column;
+
+
+            div.service {
+                display: flex;
+                width: 100%;
+                height: 40px;
+                margin-bottom: 20px;
+
+
+
+                span.text {
+                    padding: 0;
+                    flex-basis: 80%;
+                    font-size: 1.6rem;
+                    line-height: 40px;
+                }
+
+                span.longer {
+                    line-height: 40px;
+                    padding: 0;
+                }
+
+                span.icon {
+                    line-height: 40px;
+                    flex-basis: 20%;
+                    font-size: 2.5rem;
+                }
+            }
+        }
+    }
+
     section.gallery {
 
         article {
@@ -773,6 +829,23 @@ section.contact {
                 display: flex;
                 height: 100vh;
 
+            }
+
+        }
+    }
+
+    section.subscribe {
+
+        article {
+            width: 90%;
+
+
+
+            p {
+                width: 65%;
+                font-size: 1.6rem;
+                margin-bottom: 20px;
+                line-height: 2rem;
             }
 
         }
